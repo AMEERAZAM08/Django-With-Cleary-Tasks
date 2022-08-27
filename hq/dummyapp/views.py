@@ -33,7 +33,8 @@ def show(request):
     return JsonResponse({'result':list(data.values())})
 
 @csrf_exempt
-def show_by_age(request):
+def show_by_age(request): 
+    
     age = request.POST['age']
     #find all  age equal to age
     data = Test.objects.filter(age=age)
