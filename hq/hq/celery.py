@@ -1,9 +1,11 @@
-# django_celery/celery.py
-
+from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_celery.settings")
-app = Celery("django_celery")
-app.config_from_object("django.conf:settings", namespace="CELERY")
+# setting the Django settings module.
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hq.settings')
+app = Celery('hq')
+app.config_from_object('django.conf:settings', namespace='CELERY')
+
+# Looks up for task modules in Django applications and loads them
 app.autodiscover_tasks()

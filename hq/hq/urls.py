@@ -19,7 +19,10 @@ from  dummyapp import views
 
 from django.urls import path,include
 from  django.conf.urls import url
+ 
 
+from  dummyapp.views import UsersListView
+from  dummyapp.views import GenerateRandomUserView
 
 
 # from Django.hq import dummyapp
@@ -27,6 +30,8 @@ from  django.conf.urls import url
 urlpatterns = [
     path('', views.homepage),
     path('admin/', admin.site.urls),
+    url('users/', UsersListView.as_view(), name='users_list'),
+    url('generate/', GenerateRandomUserView.as_view(), name='generate'),
     path('add/',views.add),
     path('insert/',views.insert),
     path('show/',views.show),
@@ -38,4 +43,3 @@ urlpatterns = [
     
  
 ]
-
