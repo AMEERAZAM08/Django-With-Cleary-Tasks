@@ -7,6 +7,6 @@ class GenerateRandomUserForm(forms.Form):
     total = forms.IntegerField(
         validators=[
             MinValueValidator(1, 'The number of users must be greater than 0'),
-            MaxValueValidator(50, 'The number of users must be less than 50')
+            MaxValueValidator(400, 'The number of users must be less than 50')
         ]
     )
