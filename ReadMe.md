@@ -10,7 +10,7 @@
 
 #### 6.  python  manage.py  runserver
 
-#### hit urls http://127.0.0.0:8000/users/  and http://127.0.0.0:8000/generate the celary task will be executed
+#### hit urls http://127.0.0.1:8000/users/  and http://127.0.0.1:8000/generate the celary task will be executed
 
 
 
