@@ -1,4 +1,4 @@
-### Stps 
+### Steps 
 
 #### 1.  pip  insatll  -r  requirements.txt
 #### 2.  python  manage.py  makemigrations
